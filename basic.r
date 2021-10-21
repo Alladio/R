@@ -45,3 +45,10 @@ total_week <- total_poker + total_roulette
 
 # Define a new variable based on a selection
 roulette_selection_vector <- poker_vector[c(2:5)]
+
+
+# Select poker results for Monday, Tuesday and Wednesday
+poker_start <- poker_vector[c("Monday","Tuesday","Wednesday")]
+  
+# Calculate the average of the elements in poker_start
+mean(poker_start)
