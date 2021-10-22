@@ -52,3 +52,16 @@ poker_start <- poker_vector[c("Monday","Tuesday","Wednesday")]
   
 # Calculate the average of the elements in poker_start
 mean(poker_start)
+
+# Which days did you make money on poker?
+selection_vector <- c(poker_vector) > 0
+  
+# Print out selection_vector
+selection_vector
+
+# Which days did you make money on poker?
+selection_vector <- poker_vector > 0
+selection_vector
+# Select from poker_vector these days
+poker_winning_days <- poker_vector[selection_vector]
+poker_winning_days
