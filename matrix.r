@@ -60,7 +60,16 @@ titles <- c("A New Hope",
 star_wars_matrix <- matrix(box_office, 
                       nrow = 3, byrow = TRUE,
                       dimnames = list(titles, region))
-					  
+
+box_office <- c(474.5,  552.5, 310.7,  338.7, 380.3 , 468.5)
+region <- c("US", "non-US")
+titles <- c("The Phantom Menace", 
+                 "Attack of the Clones", 
+                 "Revenge of the Sith")
+				 
+star_wars_matrix2 <- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
 					  
 # Calculate worldwide box office figures
 worldwide_vector <- rowSums(star_wars_matrix)
@@ -71,4 +80,11 @@ Total
 # Bind the new variable worldwide_vector as a column to star_wars_matrix
 all_wars_matrix <- cbind(star_wars_matrix, Total)
 all_wars_matrix
-					  
+
+# Combine both Star Wars trilogies in one matrix
+all_wars_matrix <- rbind(star_wars_matrix,star_wars_matrix2)
+all_wars_matrix
+
+# Total revenue for US and non-US
+total_revenue_vector <- colSums(all_wars_matrix)
+total_revenue_vector
