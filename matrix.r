@@ -88,3 +88,9 @@ all_wars_matrix
 # Total revenue for US and non-US
 total_revenue_vector <- colSums(all_wars_matrix)
 total_revenue_vector
+
+# Select the non-US revenue for all movies (Select all values of third colum)
+non_us_all <- all_wars_matrix[,2]
+
+# Select the non-US revenue for first two movies (Third cloum)
+non_us_some <- all_wars_matrix[1:2,2]
