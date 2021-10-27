@@ -73,4 +73,5 @@ subset(planets_df, subset= diameter<1)
 # Play around with the order function in the console
 a <- c(100,10,1000,99,101)
 order(a)
-a[order(a)]
+b <-a[order(a)]
+b
